@@ -57,11 +57,16 @@ body {
 iframe {
     position: relative;
     display: block;
-    width: 800px;
-    height: 600px;
+    width: 400px;
+    height: 800px;
     border: 2px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    @media (min-width: 768px) {
+        width: 1280px;
+        height: 800px;
+    }
 }
 
 #fullscreen-btn {

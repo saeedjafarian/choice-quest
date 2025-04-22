@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
     font-family: 'poetsen';
-    src: url('font/PoetsenOne-Regular.ttf');
+    src: url('../font/PoetsenOne-Regular.ttf');
 }
 /* Css Reset */
 html, body, div, span, applet, object, iframe,
@@ -147,6 +147,7 @@ body {
 
 #competition {
     display: none;
+    flex-direction: column;
     margin: 0 1rem;
     margin-bottom: 5rem;
 
@@ -156,8 +157,8 @@ body {
 }
 
 #question {
-    @media (min-width: 768px) {
-        font-size: 5rem;
+    @media (min-width: 1200px) {
+        font-size: 4rem;
     }
 }
 
@@ -166,12 +167,14 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 20px;
-    margin-bottom: 5rem;
+    margin-top: 0;
     @media (min-width: 768px) {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto;
         gap: 50px;
-        margin-bottom: 15rem;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 3rem;
     }
 }
 
@@ -206,12 +209,13 @@ body {
 #up-details {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 0;
+    margin: 0.1rem 0;
     font-size: 1.2rem;
     color: white;
 
     @media (min-width: 768px) {
         font-size: 2rem;
+        margin: 2rem 0;
     }
 }
 
@@ -229,6 +233,10 @@ body {
 }
 
 #down-details {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
@@ -259,10 +267,22 @@ body {
 }
 
 #ready {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
-    font-size: 5rem;
-    text-align: center;
+    font-size: 3rem;
     color:white;
+    text-shadow: 
+    -3px -3px 0 rgb(3, 35, 148), 
+     3px -3px 0 rgb(3, 35, 148), 
+    -3px  3px 0 rgb(3, 35, 148), 
+     3px  3px 0 rgb(3, 25, 148);
+        
+    @media (min-width: 768px) {
+        font-size: 5rem;
+    }
 }
 
 #result {

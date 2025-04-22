@@ -22,5 +22,8 @@ window.addEventListener('message', (event) => {
     }
 
     // Handle the message received from the iframe
-    console.log('Message from iframe:', event.data);
+    // console.log('Message from iframe:', event.data);
+    if (event.data.type) {
+        alert(`Received message: ${event.data.type}`);
+    }
 });
