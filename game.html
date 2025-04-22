@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choice Quest</title>
+    <link rel="stylesheet" href="/src/app.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="menu">
+        <h1 class="title">Choice Quest</h1>
+        <button id="start">START</button>
+    </div>
+    <p id="ready">Ready...</p>
+    <div id="competition">
+        <div id="up-details">
+            <p id="timer">0:00</p>
+            <div>
+                <img src="src/img/check-mark.png" alt="check">
+                <p id="current-answers">0</p>
+            </div>
+        </div>
+        <h2 id="question" class="title"></h2>
+        <div id="options">
+            <button class="option"></button>
+            <button class="option"></button>
+            <button class="option"></button>
+            <button class="option"></button>
+        </div>
+        <div id="down-details">
+            <p id="total-quest"></p>
+        </div>
+    </div>
+    <div id="result">
+        <h1 class="title">GAME COMPLETE</h1>
+        <p>Time: <span id="final-time">0:00</span></p>
+        <p>Score: <span id="final-answers">1/4</span></p>
+        <button id="try-again">Try Again</button>
+    </div>
+    <script src="/src/app.js"></script>
+</body>
+</html>

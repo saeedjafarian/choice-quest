@@ -3,35 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choice Quest</title>
-    <link rel="stylesheet" href="/src/app.css">
+    <title>App</title>
+    <link rel="stylesheet" href="src/main.css">
 </head>
 <body>
-    <!-- <div class="circle"></div> -->
-    <canvas id="canvas"></canvas>
-    <div id="menu">
-        <h1 class="title">Choice Quest</h1>
-        <button id="start">START</button>
-    </div>
-    <div id="competition">
-        <div id="up-details">
-            <p id="timer">0:00</p>
-            <div>
-                <img src="src/img/check-mark.png" alt="check">
-                <p id="current-answers">0</p>
-            </div>
-        </div>
-        <h2 id="question" class="title">What is the capital of Germany?</h2>
-        <div id="options">
-            <button class="option"></button>
-            <button class="option"></button>
-            <button class="option"></button>
-            <button class="option"></button>
-        </div>
-        <div id="down-details">
-            <p id="total-quest"></p>
-        </div>
-    </div>
-    <script src="/src/app.js"></script>
+    <iframe allowfullscreen="true" scrolling="no" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" id="game_drop" src="game.html" width="100%" height="100%" frameborder="0"></iframe>
+    <!-- <iframe src="game.html"></iframe> -->
+    <button id="fullscreen-btn">Go Fullscreen</button>
+    <script src="src/main.js"></script>
 </body>
 </html>

@@ -51,7 +51,7 @@ table {
 body {
     font-family: 'poetsen';
     background-color: #028CF8;
-    /* overflow: hidden; */
+    /* box-sizing: content-box; */
 }
 
 /* Rotating Radial Stripes */
@@ -122,30 +122,28 @@ body {
     }
 }
 
+#menu {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
 #start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'poetsen';
     display: block;
-    margin: 15rem auto;
     padding: 1rem 2rem;
     font-size: 1.5rem;
-    color: white;
-    background-color: rgb(3, 25, 148);
+    color: black;
+    background-color: rgb(224, 228, 7);
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    &:active {
-        transform: translateY(1px);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
 }
+
 
 #competition {
     display: none;
@@ -240,6 +238,91 @@ body {
         font-size: 2rem;
     }
 }
+
+#fullscreen-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    padding: 10px 20px;
+    background-color: #2a5298;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#fullscreen-btn:hover {
+    background-color: #1e3c72;
+}
+
+#ready {
+    display: none;
+    font-size: 5rem;
+    text-align: center;
+    color:white;
+}
+
+#result {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-template-rows: repeat(3, auto);
+    text-align: center;
+    width: 20rem;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    
+    @media (min-width: 768px) {
+        width: 30rem;
+    }
+}
+
+#result .title {
+    font-size: 2rem;
+    color: white;
+
+    @media (min-width: 768px) {
+        font-size: 2.5rem;
+    }
+}
+
+#result p {
+    font-size: 1.4rem;
+    color: #ffffff;
+
+    @media (min-width: 768px) {
+        font-size: 1.5rem;
+    }
+}
+
+#result span {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+#try-again {
+    font-family: 'poetsen';
+    margin: 15px 20px;
+    padding: 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#try-again:hover {
+    background-color: #0056b3;
+}
+
 svg {
     width: 100px;
     height: 100px;
