@@ -1,0 +1,251 @@
+/* Fonts */
+@font-face {
+    font-family: 'poetsen';
+    src: url('font/PoetsenOne-Regular.ttf');
+}
+/* Css Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    font-family: 'poetsen';
+    background-color: #028CF8;
+    /* overflow: hidden; */
+}
+
+/* Rotating Radial Stripes */
+/* .circle {
+    position: absolute;
+    width: 200vw;
+    height: 200vh;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background: conic-gradient(
+        #028CF8 0deg 30deg,
+        rgb(64, 127, 243) 30deg 60deg,
+        #028CF8 60deg 90deg,
+        rgb(64, 127, 243) 90deg 120deg,
+        #028CF8 120deg 150deg,
+        rgb(64, 127, 243) 150deg 180deg,
+        #028CF8 180deg 210deg,
+        rgb(64, 127, 243) 210deg 240deg,
+        #028CF8 240deg 270deg,
+        rgb(64, 127, 243) 270deg 300deg,
+        #028CF8 300deg 330deg,
+        rgb(64, 127, 243) 330deg 360deg
+    );
+    animation: rotate 4s linear infinite;
+} */
+
+/* @keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+} */
+
+/* .circle {
+    animation: rotate 15s linear infinite;
+} */
+
+/* .b-title {
+    text-align: center;
+    color: white;
+    margin: 5rem 0;
+    font-size: 4rem;
+} */
+
+#canvas {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+}
+.title {
+    text-align: center;
+    color: white;
+    margin: 3rem 0;
+    font-size: 2rem;
+    text-shadow: 
+    -3px -3px 0 rgb(3, 35, 148), 
+     3px -3px 0 rgb(3, 35, 148), 
+    -3px  3px 0 rgb(3, 35, 148), 
+     3px  3px 0 rgb(3, 25, 148);
+
+     @media (min-width: 768px) {
+        font-size: 4rem;
+        margin: 5rem 0;
+    }
+}
+
+#start {
+    font-family: 'poetsen';
+    display: block;
+    margin: 15rem auto;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(3, 25, 148);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+}
+
+#competition {
+    display: none;
+    margin: 0 1rem;
+    margin-bottom: 5rem;
+
+    @media (min-width: 768px) {
+        margin: 0 3rem;
+    }
+}
+
+#question {
+    @media (min-width: 768px) {
+        font-size: 5rem;
+    }
+}
+
+#options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    margin-bottom: 5rem;
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 50px;
+        margin-bottom: 15rem;
+    }
+}
+
+.option {
+    font-family: 'poetsen';
+    font-size: 1rem;
+    min-height: 15rem;
+    padding: 10px;
+    cursor: pointer;
+    border: 10px solid rgb(251, 255, 17);
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: rgb(251, 255, 17);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (min-width: 768px) {
+        font-size: 2rem;
+    }
+}
+
+#up-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    color: white;
+
+    @media (min-width: 768px) {
+        font-size: 2rem;
+    }
+}
+
+#up-details > div {
+    display: flex;
+}
+
+#up-details > div > img {
+    width: 1.2rem;
+    height: 1.2rem;
+    @media (min-width: 768px) {
+        width: auto;
+        height: auto;
+    }
+}
+
+#down-details {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+
+    @media (min-width: 768px) {
+        font-size: 2rem;
+    }
+}
+svg {
+    width: 100px;
+    height: 100px;
+
+    @media (min-width: 768px) {
+        width: 35px;
+        height: 35px;
+    }
+}

@@ -1,0 +1,17 @@
+[
+    {
+        "question": "What is the capital of Germany?",
+        "answer": 3,
+        "options": ["Paris", "Madrid", "Berlin", "Rome"]
+    },
+    {
+        "question": "What is your favorite animal?",
+        "answer": 2,
+        "options": ["Cat", "Dog", "Bird", "Fish"]
+    },
+    {
+        "question": "What is your favorite season?",
+        "answer": 4,
+        "options": ["Spring", "Summer", "Autumn", "Winter"]
+    }
+]
